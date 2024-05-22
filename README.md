@@ -1,6 +1,6 @@
 # AIGC-PC
 
-## Project setup
+## Project setup 
 ```
 yarn install
 ```
