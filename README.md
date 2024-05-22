@@ -1,4 +1,4 @@
-# hm-element-pc
+# AIGC-PC
 
 ## Project setup
 ```
