@@ -42,21 +42,13 @@
           <i class="el-icon-picture-outline"></i>
           <span>图片检测</span>
         </el-menu-item>
-        <el-menu-item index="/video">
-          <i class="el-icon-video-camera"></i>
-          <span>视频检测</span>
-        </el-menu-item>
-        <el-menu-item index="/audio">
-          <i class="el-icon-microphone"></i>
-          <span>音频检测</span>
-        </el-menu-item>
-        <el-menu-item index="/records">
+        <el-menu-item index="/text-record">
           <i class="el-icon-pie-chart"></i>
-          <span>历史记录</span>
+          <span>文本历史</span>
         </el-menu-item>
-        <el-menu-item index="/model">
+        <el-menu-item index="/image-record">
           <i class="el-icon-coin"></i>
-          <span>模型训练</span>
+          <span>图片历史</span>
         </el-menu-item>
         <el-menu-item index="/user">
           <i class="el-icon-user"></i>
@@ -72,7 +64,7 @@
 </template>
 
 <script>
-import { getUser } from '@/api/user'
+import { getUser } from '@/api/user.js'
 export default {
   name: 'layout-page',
   data () {

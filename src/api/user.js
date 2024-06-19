@@ -16,18 +16,6 @@ export const login = ({ username, password }) => {
   })
 }
 
-export const uploadText = (formData) => {
-  const path = '/check/text'
-  // 然后我们用formData作为POST请求的body
-  return request.post(path, formData, {})
-}
-
-export const uploadImage = (file) => {
-  // 这里我们创建了一个FormData对象并将文件附加到它
-  const path = '/check/image'
-  // 然后我们用formData作为POST请求的body
-  return request.post(path, file, {})
-}
 // 获取当前的用户信息
 export const getUser = () => {
   return request.get('/user/info')

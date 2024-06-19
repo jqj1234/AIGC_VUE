@@ -39,7 +39,7 @@ import { getUser, updateUser } from '@/api/user.js'
 export default {
   name: 'user-page',
   data () {
-    // 模拟服务端返回的数据
+    // 服务端返回的数据
     return {
       userData: {
         id: '',

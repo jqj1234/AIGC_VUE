@@ -2,16 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/views/login' // index.vue 可以省略
 import Layout from '@/views/layout'
-import Text from '@/views/dashboard'
-import Image from '@/views/article'
-import Test from '@/views/test'
+import Text from '@/views/text'
+import Image from '@/views/photo'
 // import store from '@/store'
 import User from '@/views/user'
-import Video from '@/views/video'
-import Audio from '@/views/audio'
-import Records from '@/views/records'
-import Model from '@/views/model'
-import Index from '@/views/index'
+import TextRecord from '@/views/record/text'
+import ImageRecord from '@/views/record/photo'
 Vue.use(VueRouter)
 
 // 创建路由对象
@@ -40,20 +36,16 @@ const router = new VueRouter({
   routes: [
     { path: '/login', component: Login },
     {
-      path: '/text',
+      path: '/',
       component: Layout,
       children: [
         { path: '/text', component: Text },
         { path: '/image', component: Image },
         { path: '/user', component: User },
-        { path: '/video', component: Video },
-        { path: '/audio', component: Audio },
-        { path: '/records', component: Records },
-        { path: '/model', component: Model }
+        { path: '/text-record', component: TextRecord },
+        { path: '/image-record', component: ImageRecord }
       ]
-    },
-    { path: '/test', component: Test },
-    { path: '/', component: Index }
+    }
   ]
 })
 
