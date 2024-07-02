@@ -19,5 +19,5 @@ export const recordImage = (info) => {
 
 // 删除图片
 export const delImage = (fileId) => {
-    return request.delete('/record/image' + fileId)
+    return request.delete('/record/image/' + fileId)
 }

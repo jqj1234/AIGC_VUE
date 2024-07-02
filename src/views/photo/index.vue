@@ -90,8 +90,7 @@ export default {
                     const response = await uploadImage(formData)
                     const userInfo = await getUser()
                     const info = {
-                        url: response.url,
-                        originalFilename: response.originalFilename,
+                        url: response.data.url,
                         type: this.fileToUpload.name.substring(this.fileToUpload.name.lastIndexOf('.') + 1),
                         username: userInfo.data.username,
                         id: userInfo.data.id

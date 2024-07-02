@@ -52,7 +52,7 @@
         </el-table>
         <!-- 分页 -->
         <el-pagination @size-change="getRecordImage" @current-change="getRecordImage"
-            :current-page="queryParams.pageNum" :page-sizes="[10, 20, 30, 40]" :page-size="10"
+            :current-page="queryParams.pageNum" :page-sizes="[10, 20, 30, 40]" :page-size="queryParams.pageSize"
             layout="total, sizes, prev, pager, next, jumper" :total="total">
         </el-pagination>
     </div>
@@ -109,8 +109,8 @@ export default {
             const userInfo = await getUser()
             this.queryParams.userId = userInfo.data.id;
             recordImage(this.queryParams).then(response => {
-                this.tableData = response.rows;
-                this.total = response.total;
+                this.tableData = response.data.rows;
+                this.total = response.data.totalRows;
             })
             this.loading = false;
         },
@@ -132,7 +132,7 @@ export default {
             // console.log(row);
             const fileIds = row.id || this.ids;
             // console.log(fileIds)
-            this.$modal.confirm('是否确认删除图片编号为"' + fileIds + '"的数据项？').then(function () {
+            this.$confirm('是否确认删除图片编号为"' + fileIds + '"的数据项？').then(function () {
                 return delImage(fileIds);
             }).then(() => {
                 this.getRecordImage();

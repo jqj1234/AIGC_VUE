@@ -6,7 +6,7 @@ import { Message } from 'element-ui'
 
 // 创建一个新的axios实例
 const request = axios.create({
-  baseURL: 'http://47.108.75.31:8090/',
+  // baseURL: 'http://47.108.75.31:8090/',
   // baseURL: 'http://127.0.0.1:8090/',
   timeout: 50000
 })

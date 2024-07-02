@@ -19,5 +19,5 @@ export const recordText = (info) => {
 
 // 删除文件
 export const delFile = (fileId) => {
-    return request.delete('/record/text' + fileId)
+    return request.delete('/record/text/' + fileId)
 }

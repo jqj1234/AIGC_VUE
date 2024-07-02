@@ -38,6 +38,7 @@ const router = new VueRouter({
     {
       path: '/',
       component: Layout,
+      redirect: '/text',
       children: [
         { path: '/text', component: Text },
         { path: '/image', component: Image },

@@ -207,7 +207,7 @@ export default {
             url: response.data.url,
             originalFilename: response.data.originalFilename,
             id: userInfo.data.id,
-            username: userInfo.data.id,
+            username: userInfo.data.username,
             model: this.value
           }
           // const formData2 = new FormData()
